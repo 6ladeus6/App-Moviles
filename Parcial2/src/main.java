@@ -77,7 +77,6 @@ public class main {
                         System.out.println(watchman1.getWeapon());
                         System.out.println(watchman1.getWorkDay());
                     }
-                    break;
                 case 10:
                     flagClose = true;
                     break;
