@@ -1,5 +1,5 @@
 public class Admin extends Person{
-    /*String leader;
+    String leader;
     String parking;
     public String getLeader() {
         return leader;
@@ -12,6 +12,6 @@ public class Admin extends Person{
     }
     public void setParking(String parking) {
         this.parking = parking;
-    }*/
+    }
 
 }

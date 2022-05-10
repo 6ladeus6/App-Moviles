@@ -55,7 +55,6 @@ public class main {
                     break;
                 case 4:
                     Admin admin = new Admin();
-                    Accountant accountant2 = new Accountant();
                     System.out.println("Ingrese el nombre");
                     admin.setName(scanner.nextLine());
                     System.out.println("Ingrese ID");
@@ -63,11 +62,10 @@ public class main {
                     System.out.println("Ingrese Su Edad");
                     admin.setAgge(Integer.parseInt(scanner.nextLine()));
                     System.out.println("Ingrese su Lider");
-                    accountant2.setLeader(scanner.nextLine());
+                    admin.setLeader(scanner.nextLine());
                     System.out.println("Ingrese su parking");
-                    accountant2.setParking(scanner.nextLine());
+                    admin.setParking(scanner.nextLine());
                     dbAdmin.setAdmin(admin);
-                    dbAccountant.setAccountant(accountant2);
                     break;
                 case 5:
                     for(Watchman watchman1: dbwatchman.getWatchman()){
@@ -77,7 +75,28 @@ public class main {
                         System.out.println(watchman1.getWeapon());
                         System.out.println(watchman1.getWorkDay());
                     }
-                case 10:
+                    for(CleaningStaff cleaningStaff1: dbCleaningStaff.getCleaningStaff()){
+                        System.out.println(cleaningStaff1.getName());
+                        System.out.println(cleaningStaff1.getId());
+                        System.out.println(cleaningStaff1.getAgge());
+                        System.out.println(cleaningStaff1.getDayOff());
+                    }
+                    for(Accountant accountant1: dbAccountant.getAccountant()){
+                        System.out.println(accountant1.getName());
+                        System.out.println(accountant1.getId());
+                        System.out.println(accountant1.getAgge());
+                        System.out.println(accountant1.getLeader());
+                        System.out.println(accountant1.getParking());
+                    }
+                    for(Admin admin1: dbAdmin.getAdmin()){
+                        System.out.println(admin1.getName());
+                        System.out.println(admin1.getId());
+                        System.out.println(admin1.getAgge());
+                        System.out.println(admin1.getLeader());
+                        System.out.println(admin1.getParking());
+                    }
+                    break;
+                case 0:
                     flagClose = true;
                     break;
             }
